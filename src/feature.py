@@ -44,3 +44,10 @@ def feature_nico():
     This is a feature written bei Nico
     """
     print("Everything is awesome!")
+
+
+def feature_five():
+    """
+    Function Description
+    """
+    print("Feature five")
