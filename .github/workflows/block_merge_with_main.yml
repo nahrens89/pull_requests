@@ -1,0 +1,20 @@
+name: Block merges from not allowed branches
+
+on:
+  pull_request:
+
+jobs:
+  block_damaging_merges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if merging to prod is safe
+        if: github.base_ref == 'prod' && github.head_ref != 'stage' && startsWith(github.head_ref, 'hotfix/') == false
+        run: |
+          echo "ERROR: You can only merge to prod from stage or a hotfix branch."
+          exit 1
+
+      - name: Check if merging to dev is safe
+        if: github.base_ref == 'stage' && github.head_ref != 'dev' && github.head_ref == 'prod'
+        run: |
+          echo "ERROR: You can only merge to stage from dev."
+          exit 1
