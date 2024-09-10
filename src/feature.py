@@ -46,8 +46,8 @@ def feature_nico():
     print("Everything is awesome!")
 
 
-def feature_fife():
+def feature_five():
     """
     Function Description
     """
-    print("Feature fife")
+    print("Feature five")
