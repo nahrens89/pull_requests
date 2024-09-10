@@ -2,7 +2,7 @@ name: Deployment on Staging
 
 on:
   pull_request:
-    branches: dev
+    branches: stage
     types: closed
 
 jobs:
@@ -12,5 +12,4 @@ jobs:
     environment: staging
     steps:
     - run: |
-        sleep 60
-        echo Deployed on dev server
+        echo Deployed on staging server
