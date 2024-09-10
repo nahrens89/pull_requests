@@ -13,8 +13,8 @@ jobs:
           echo "ERROR: You can only merge to prod from stage or a hotfix branch."
           exit 1
 
-      - name: Check if merging to dev is safe
-        if: github.base_ref == 'stage' && github.head_ref != 'dev' && github.head_ref == 'prod'
+      - name: Check if merging to stage is safe
+        if: github.base_ref == 'stage' && github.head_ref != 'dev' && github.head_ref != 'prod' && startsWith(github.head_ref, 'release/') == false
         run: |
           echo "ERROR: You can only merge to stage from dev."
           exit 1
