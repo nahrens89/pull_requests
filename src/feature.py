@@ -58,3 +58,10 @@ def feature_i_dont_know():
     Function Description
     """
     print("Feature irgendwas")
+
+
+def feature_to_release():
+    """
+    Function Description
+    """
+    print("RELEASE THIS!")
