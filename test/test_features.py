@@ -25,3 +25,35 @@ def test_feature_eight():
     This works!
     """
     assert 8 + 8 == 16
+
+
+def test_feature_nine():
+    """
+    Test for detection of feature nine.
+    This works!
+    """
+    assert 9 + 9 == 18
+
+
+def test_feature_ten():
+    """
+    Test for detection of feature ten.
+    This works!
+    """
+    assert 10 + 10 == 20
+
+
+def test_feature_eleven():
+    """
+    Test for detection of feature eleven.
+    This works!
+    """
+    assert 11 + 11 == 22
+
+
+def test_feature_twelve():
+    """
+    Test for detection of feature twelve.
+    This works!
+    """
+    assert 12 + 12 == 24
