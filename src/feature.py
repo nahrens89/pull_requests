@@ -51,3 +51,10 @@ def feature_five():
     Function Description
     """
     print("Feature five")
+
+
+def feature_i_dont_know():
+    """
+    Function Description
+    """
+    print("Feature irgendwas")
