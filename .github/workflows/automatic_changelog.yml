@@ -2,19 +2,29 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - prod
+  workflow_dispatch:
 
+permissions:
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
+  issues: write
+  packages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
+ 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Prepare local repository
-        run: git fetch --prune --unshallow --tags -f
-      - name: semver-releaser
-        uses: heyvito/semver-releaser@v0.0.10
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          branch: prod
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
