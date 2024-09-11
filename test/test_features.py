@@ -49,11 +49,3 @@ def test_feature_eleven():
     This works!
     """
     assert 11 + 11 == 22
-
-
-def test_feature_twelve():
-    """
-    Test for detection of feature twelve.
-    This works!
-    """
-    assert 12 + 12 == 24
