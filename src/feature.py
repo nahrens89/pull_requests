@@ -72,3 +72,7 @@ def feature_do_not_release_this_in_the_next_release():
     Function Description
     """
     print("DONT RELEASE THIS IN v1.3.x!")
+
+
+def feature_boring():
+    print("This is boring but necessary")
